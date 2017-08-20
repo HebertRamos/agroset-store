@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="col-md-12">
+
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a>
+            </li>
+            <li>{{categoriaAtual.nome}}</li>
+        </ul>
+
+        <div class="box">
+            <h1>{{categoriaAtual.nome}}</h1>
+        </div>
+
+        <div class="row products">
+
+            <div class="col-md-3 col-sm-4" ng-repeat="produto in produtos">
+                <div class="product">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front">
+                                <!--<a href="detail.html">-->
+                                    <img src="assets/img/product1.jpg" alt="" class="img-responsive">
+                                <!--</a>-->
+                            </div>
+                            <div class="back">
+                                <!--<a href="detail.html">-->
+                                    <img src="assets/img/product1_2.jpg" alt="" class="img-responsive">
+                                <!--</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a href="detail.html" class="invisible">-->
+                        <img src="assets/img/product1.jpg" alt="" class="img-responsive">
+                    <!--</a>-->
+                    <div class="text">
+                        <h3>{{produto.itemCompra.nome}}</h3>
+                        <p class="price">{{produto.preco | currency}}</p>
+                        <p class="buttons">
+                            <a href="#" ng-click="adicionarItemCarrinho($event, produto)" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Adicionar <br/> ao carrinho</a>
+                        </p>
+                    </div>
+                    <!-- /.text -->
+                </div>
+                <!-- /.product -->
+            </div>
+
+        </div>
+        <!-- /.products -->
+
+
+    </div>
+    <!-- /.col-md-9 -->
+
+</div>
+<!-- /.container -->

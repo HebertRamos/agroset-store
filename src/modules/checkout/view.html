@@ -1,0 +1,85 @@
+<div class="container">
+
+    <div class="col-md-12">
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a>
+            </li>
+            <li>Checkout</li>
+        </ul>
+    </div>
+
+    <div class="col-md-12" id="checkout">
+
+        <div class="box">
+
+                <h1>Checkout</h1>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active"><a href="#"><i class="fa fa-money"></i><br>Finalizar Compra</a>
+                    </li>
+                </ul>
+
+                <div class="content">
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Preço unitário</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="itemVenda in carrinho.itens">
+
+                                <td>
+                                    {{itemVenda.produtoVenda.itemCompra.nome}}
+                                </td>
+                                <td>
+                                    {{itemVenda.quantidade}}
+                                </td>
+                                <td>
+                                    {{itemVenda.produtoVenda.preco | currency }}
+                                </td>
+                                <td>
+                                    {{ ( itemVenda.produtoVenda.preco * itemVenda.quantidade) | currency }}
+                                </td>
+                            </tr>
+
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <th colspan="5">Total</th>
+                                <th colspan="2">{{carrinho.total | currency }}</th>
+                            </tr>
+                            </tfoot>
+                        </table>
+
+                    </div>
+                    <!-- /.table-responsive -->
+
+                </div>
+
+                <div class="box-footer">
+                    <div class="pull-left">
+                        <a href="#" ui-sref="layout.home" class="btn btn-default"><i class="fa fa-chevron-left"></i>
+                            Continue Comprando</a>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-primary" ng-click="finalizarCompra()">Confirmar Compra<i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+        </div>
+        <!-- /.box -->
+
+
+    </div>
+    <!-- /.col-md-9 -->
+
+
+
+</div>
+<!-- /.container -->
