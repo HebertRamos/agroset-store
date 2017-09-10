@@ -9,7 +9,7 @@ define(['./module'], function (app) {
 
         $scope.$root.usuarioAtual = usuarioAtual;
 
-        $scope.loggedUser = {nome: 'teste'};
+
 
         $scope.categorias = categorias;
 

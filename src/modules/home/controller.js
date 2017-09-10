@@ -6,7 +6,6 @@ define(['./module'], function (module) {
 
     module.controller('HomeController', ['$scope', 'produtos', function ($scope, produtos) {
 
-
         $scope.produtos = produtos;
 
     }]);

@@ -62,13 +62,16 @@ _________________________________________________________ -->
                     <span class="sr-only">Toggle navigation</span>
                     <i class="fa fa-align-justify"></i>
                 </button>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
-                    <span class="sr-only">Toggle search</span>
-                    <i class="fa fa-search"></i>
-                </button>
-                <a class="btn btn-default navbar-toggle" href="basket.html">
-                    <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
-                </a>
+                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">-->
+                    <!--<span class="sr-only">Toggle search</span>-->
+                    <!--<i class="fa fa-search"></i>-->
+                <!--</button>-->
+
+                <a href="#" ui-sref="layout.carrinho" class="btn btn-default navbar-toggle">
+                    <i class="fa fa-shopping-cart"></i><span class="hidden-xs">{{ getTextoCarrinho() }}</span></a>
+                <!--<a class="btn btn-default navbar-toggle" href="basket.html">-->
+                    <!--<i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>-->
+                <!--</a>-->
             </div>
         </div>
         <!--/.navbar-header -->

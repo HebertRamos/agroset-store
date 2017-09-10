@@ -44,7 +44,7 @@
                                 {{ ( itemVenda.produtoVenda.preco * itemVenda.quantidade) | currency }}
                             </td>
                             <td>
-                                <a href="#" ng-click="removerItemCarrinho($event, itemVenda.produto)" ><i class="fa fa-trash-o"></i></a>
+                                <a href="#" ng-click="removerItemCarrinho($event, itemVenda.produtoVenda)" ><i class="fa fa-trash-o"></i></a>
                             </td>
                         </tr>
 
@@ -62,12 +62,14 @@
 
                 <div class="box-footer">
                     <div class="pull-left">
-                        <a href="#" ui-sref="layout.home" class="btn btn-default"><i class="fa fa-chevron-left"></i>
-                            Continue Comprando</a>
+                        <a href="#" ui-sref="layout.home" class="btn btn-default">
+                            <i class="fa fa-chevron-left"></i>
+                            Continue <br/> Comprando</a>
                     </div>
                     <div class="pull-right">
-                        <a href="#" ng-click="irParaCheckout($event)" class="btn btn-primary">Cofirmar pagamento <i
-                                class="fa fa-chevron-right"></i>
+                        <a href="#" ng-click="irParaCheckout($event)" class="btn btn-primary">
+                            Cofirmar <br/> Pagamento
+                            <i class="fa fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>

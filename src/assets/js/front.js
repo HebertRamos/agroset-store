@@ -1,11 +1,5 @@
 define(['jquery'], function ($) {
 
-
-    if ($.cookie("theme_csspath")) {
-        $('link#theme-stylesheet').attr("href", $.cookie("theme_csspath"));
-    }
-
-
     $(document).ready(function () {
         $(this).alignElementsSameHeight();
     });
